@@ -6,6 +6,7 @@ const {Schema}=mongoose
 const contactSchema= new Schema({
     name:{type:String,required:true},
     email:{type:String,required:true,unique:true},
-    phone:Number
+    phone:{type:Number},
+    img : {type: Buffer}
 })
 module.exports = Contact = mongoose.model('contact',contactSchema)
